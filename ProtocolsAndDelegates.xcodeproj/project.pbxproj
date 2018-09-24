@@ -13,6 +13,7 @@
 		55485B2221594787003BD93F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55485B2121594787003BD93F /* Assets.xcassets */; };
 		55485B2521594787003BD93F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55485B2321594787003BD93F /* LaunchScreen.storyboard */; };
 		55485B2D21594938003BD93F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55485B2C21594938003BD93F /* LoginVC.swift */; };
+		55485B2F21594E90003BD93F /* LoginCompleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55485B2E21594E90003BD93F /* LoginCompleteDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		55485B2421594787003BD93F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55485B2621594787003BD93F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55485B2C21594938003BD93F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		55485B2E21594E90003BD93F /* LoginCompleteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCompleteDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				55485B1A21594785003BD93F /* AppDelegate.swift */,
 				55485B1C21594785003BD93F /* HomeVC.swift */,
+				55485B2E21594E90003BD93F /* LoginCompleteDelegate.swift */,
 				55485B2C21594938003BD93F /* LoginVC.swift */,
 				55485B1E21594785003BD93F /* Main.storyboard */,
 				55485B2121594787003BD93F /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				55485B1D21594785003BD93F /* HomeVC.swift in Sources */,
 				55485B1B21594785003BD93F /* AppDelegate.swift in Sources */,
 				55485B2D21594938003BD93F /* LoginVC.swift in Sources */,
+				55485B2F21594E90003BD93F /* LoginCompleteDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

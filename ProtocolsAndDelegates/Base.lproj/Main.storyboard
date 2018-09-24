@@ -27,7 +27,7 @@
                                 <rect key="frame" x="168.5" y="617" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="m16-XC-ZCH" kind="show" id="rbc-q4-o8e"/>
+                                    <segue destination="m16-XC-ZCH" kind="show" identifier="LoginVC" id="rbc-q4-o8e"/>
                                 </connections>
                             </button>
                         </subviews>

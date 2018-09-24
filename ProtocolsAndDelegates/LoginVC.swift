@@ -10,14 +10,18 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+
     @IBOutlet weak var usernameEntryTxt: UITextField!
+    var delegate: LoginCompleteDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
     @IBAction func donePressed(_ sender: Any) {
+        delegate?.userCreated(name: usernameEntryTxt.text ?? "No Username")
         dismiss(animated: true, completion: nil)
     }
     

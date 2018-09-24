@@ -8,14 +8,24 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, LoginCompleteDelegate {
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
+    func userCreated(name: String) {
+        usernameLabel.text = name
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoginVC {
+            destination.delegate = self
+        }
+    }
+    
 
 }
 
