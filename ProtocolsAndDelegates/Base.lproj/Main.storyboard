@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="ProtocolsAndDelegates" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEI-7D-RSs">
+                                <rect key="frame" x="148.5" y="60" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUa-re-C2J">
+                                <rect key="frame" x="168.5" y="617" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="m16-XC-ZCH" kind="show" id="rbc-q4-o8e"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sEI-7D-RSs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="JQz-vP-pYf"/>
+                            <constraint firstItem="xUa-re-C2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aC2-Xi-VLL"/>
+                            <constraint firstItem="sEI-7D-RSs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIL-YG-nar"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xUa-re-C2J" secondAttribute="bottom" constant="20" id="dZd-FW-coe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="usernameLabel" destination="sEI-7D-RSs" id="qxi-Lk-EXK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="uJ6-sk-2mQ">
+            <objects>
+                <viewController id="m16-XC-ZCH" customClass="LoginVC" customModule="ProtocolsAndDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cs8-Ze-YjN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-WV-o5B">
+                                <rect key="frame" x="20" y="60" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XH-L8-oJH">
+                                <rect key="frame" x="169" y="617" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="m16-XC-ZCH" eventType="touchUpInside" id="Vhb-Bx-6XA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQV-WV-o5B" firstAttribute="leading" secondItem="cDQ-Dl-s02" secondAttribute="leading" constant="20" id="2jw-fi-MwO"/>
+                            <constraint firstItem="cDQ-Dl-s02" firstAttribute="bottom" secondItem="6XH-L8-oJH" secondAttribute="bottom" constant="20" id="EsH-C0-YLa"/>
+                            <constraint firstItem="cDQ-Dl-s02" firstAttribute="trailing" secondItem="aQV-WV-o5B" secondAttribute="trailing" constant="20" id="QbI-Io-JGq"/>
+                            <constraint firstItem="6XH-L8-oJH" firstAttribute="centerX" secondItem="cs8-Ze-YjN" secondAttribute="centerX" id="ZiH-g7-tFh"/>
+                            <constraint firstItem="aQV-WV-o5B" firstAttribute="top" secondItem="cDQ-Dl-s02" secondAttribute="top" constant="40" id="hQk-oM-uIg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cDQ-Dl-s02"/>
+                    </view>
+                    <connections>
+                        <outlet property="usernameEntryTxt" destination="aQV-WV-o5B" id="AYv-b8-HiZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ogl-mV-7sH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="27"/>
         </scene>
     </scenes>
 </document>

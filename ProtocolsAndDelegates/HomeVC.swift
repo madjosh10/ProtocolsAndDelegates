@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeVC.swift
 //  ProtocolsAndDelegates
 //
 //  Created by Joshua Madrigal on 9/24/18.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HomeVC: UIViewController {
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
